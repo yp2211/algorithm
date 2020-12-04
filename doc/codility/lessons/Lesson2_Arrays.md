@@ -1,10 +1,11 @@
-# [Lesson 2 Arrays](https://app.codility.com/programmers/lessons/2-arrays/)
+_Lesson 2_
+# [Arrays](https://app.codility.com/programmers/lessons/2-arrays/)
 ***
 [Open reading material (PDF)](https://codility.com/media/train/0-Arrays.pdf)
 ***
 ## Tasks:
-### [CyclicRotation](https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/)
-Rotate an array to the right by a given number of steps.
+> ### [CyclicRotation](https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/)
+> Rotate an array to the right by a given number of steps.
 ---
 An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place. For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).
 
@@ -76,11 +77,10 @@ In your solution, focus on correctness. The performance of your solution will no
 [Candidate Report: training6HJBYX-26F](https://app.codility.com/demo/results/training6HJBYX-26F/)
 
 ***
-_Copyright 2009–2020 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited._
 ***
 
-### [OddOccurrencesInArray](https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/)
-Find value that occurs in odd number of elements.
+> ### [OddOccurrencesInArray](https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/)
+> Find value that occurs in odd number of elements.
 ---
 A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
 
@@ -147,4 +147,3 @@ Write an **efficient** algorithm for the following assumptions:
 ***
 _Copyright 2009–2020 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited._
 ***
-

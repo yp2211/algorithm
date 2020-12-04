@@ -44,5 +44,38 @@
     B = {0, 2, 3}
     B.length -> 3
 ```
+***
+## Code
+```
+    public static int solution(int[] A) {
+        int goal = 0;
+        int binarianA = binarian(A);
 
+        while (binarianA > 0) {
+            int Bi = (Integer.toBinaryString(binarianA)).length() - 1;
+            binarianA -= pow2(Bi);
+            goal++;
+        }
+
+        return goal;
+    }
+    
+    /*
+        O(N)
+     */
+    private static int binarian(int[] X) {
+        int binarian = 0;
+        for (int aX : X) {
+            binarian += pow2(aX);
+        }
+        return binarian;
+    }
+
+    /*
+        point: Transfer code for computing pow2
+     */
+    private static int pow2(int Xi) {
+        return 1 << Xi;
+    }
+```
 ***

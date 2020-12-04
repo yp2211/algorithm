@@ -1,10 +1,11 @@
-# [Lesson 1 Iterations](https://app.codility.com/programmers/lessons/1-iterations/)  
+_Lesson 1_
+# [Iterations](https://app.codility.com/programmers/lessons/1-iterations/)  
 ***
 [Open reading material (PDF)](https://codility.com/media/train/Iterations.pdf)
 ***
 ## Tasks:
-### BinaryGap
-Find longest sequence of zeros in binary representation of an integer.
+> ### [BinaryGap](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/)
+> Find longest sequence of zeros in binary representation of an integer.
 ---
 A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
 
