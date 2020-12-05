@@ -1,13 +1,14 @@
 _Lesson 3_
 # [Time Complexity](https://app.codility.com/programmers/lessons/3-time_complexity/)
-***
+
 [Open reading material (PDF)](https://codility.com/media/train/1-TimeComplexity.pdf)
-***
+
 ## Tasks:
+
 > _Painless_
 > ### [FrogJmp](https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/)
 > Count minimal number of jumps from position X to Y.
-***
+
 A small frog wants to get to the other side of the road. The frog is currently located at position X and wants to get to a position greater than or equal to Y. The small frog always jumps a fixed distance, D.
 
 Count the minimal number of jumps that the small frog must perform to reach its target.
@@ -46,11 +47,11 @@ O(1)
 #### Report
 [Candidate Report: trainingBFBAZF-EXF](https://app.codility.com/demo/results/trainingBFBAZF-EXF/)
 ***
-***
+
 > _Painless_
 > ### [PermMissingElem](https://app.codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/)
 > Find the missing element in a given permutation.
-***
+
 An array A consisting of N different integers is given. The array contains integers in the range [1..(N + 1)], which means that exactly one element is missing.
 
 Your goal is to find that missing element.
@@ -75,7 +76,6 @@ Write an **efficient** algorithm for the following assumptions:
 * N is an integer within the range [0..100,000];
 * the elements of A are all distinct;
 * each element of array A is an integer within the range [1..(N + 1)].
-***
 
 #### Code1
 ```
@@ -93,7 +93,7 @@ Detected time complexity:
 O(N) or O(N * log(N))
 #### Report1
 [Candidate Report: trainingBAC3YW-77U](https://app.codility.com/c/run/trainingBAC3YW-77U/)
-***
+
 #### Code2
 ```
     public int solution(int[] A) {
@@ -116,11 +116,11 @@ O(N) or O(N * log(N))
 #### Report2
 [Candidate Report: training28V8U4-VDE](https://app.codility.com/c/run/training28V8U4-VDE/)
 ***
-***
+
 > _Painless_
 > ### [TapeEquilibrium](https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/)
 > Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.
-***
+
 A non-empty array A consisting of N integers is given. Array A represents numbers on a tape.
 
 Any integer P, such that 0 < P < N, splits this tape into two non-empty parts: A[0], A[1], ..., A[P − 1] and A[P], A[P + 1], ..., A[N − 1].
@@ -164,7 +164,7 @@ Write an **efficient** algorithm for the following assumptions:
 
 * N is an integer within the range [2..100,000];
 * each element of array A is an integer within the range [−1,000..1,000].
-***
+
 #### Code
 ```
     public int solution(int[] A) {
@@ -197,5 +197,6 @@ O(N)
 #### Report
 [Candidate Report: trainingAVSN2R-5SF](https://app.codility.com/demo/results/trainingAVSN2R-5SF/)
 ***
+
 _Copyright 2009–2020 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited._
 ***

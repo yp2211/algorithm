@@ -1,13 +1,14 @@
 _Lesson 4_
 # [Counting Elements](https://app.codility.com/programmers/lessons/4-counting_elements/)
-***
+
 [Open reading material (PDF)](https://codility.com/media/train/2-CountingElements.pdf)
 ***
 ## Tasks:
-***
+
 > _Painless_
 > ### [FrogRiverOne](https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one/)
 > Find the earliest time when a frog can jump to the other side of a river.
+
 A small frog wants to get to the other side of a river. The frog is initially located on one bank of the river (position 0) and wants to get to the opposite bank (position X+1). Leaves fall from a tree onto the surface of the river.
 
 You are given an array A consisting of N integers representing the falling leaves. A[K] represents the position where one leaf falls at time K, measured in seconds.
@@ -52,7 +53,7 @@ Write an **efficient** algorithm for the following assumptions:
 
 * N and X are integers within the range [1..100,000];
 * each element of array A is an integer within the range [1..X].
-***
+
 #### Code
 ```
     public int solution(int X, int[] A) {
@@ -86,7 +87,7 @@ O(N)
 > _Respectable_
 > ### [MaxCounters](https://app.codility.com/programmers/lessons/4-counting_elements/max_counters/)
 > Calculate the values of counters after applying all alternating operations: increase counter by 1; set value of all counters to current maximum.
-***
+
 You are given N counters, initially set to 0, and you have two possible operations on them:
 
 * increase(X) − counter X is increased by 1,
@@ -95,6 +96,7 @@ A non-empty array A of M integers is given. This array represents consecutive op
 
 * if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
 * if A[K] = N + 1 then operation K is max counter.
+
 For example, given integer N = 5 and array A such that:
 ```
     A[0] = 3
@@ -141,7 +143,7 @@ Write an **efficient** algorithm for the following assumptions:
 
 * N and M are integers within the range [1..100,000];
 * each element of array A is an integer within the range [1..N + 1].
-***
+
 #### Code
 ```
     public int[] solution(int N, int[] A) {
@@ -175,10 +177,11 @@ O(N + M)
 #### Report
 [Candidate Report: training9KQG2K-34P](https://app.codility.com/demo/results/training9KQG2K-34P/)
 ***
+
 > _Respectable_
 > ### [MissingInteger](https://app.codility.com/programmers/lessons/4-counting_elements/missing_integer/)
 > Find the smallest positive integer that does not occur in a given sequence.
-***
+
 This is a demo task.
 
 Write a function:
@@ -197,7 +200,7 @@ Write an **efficient** algorithm for the following assumptions:
 
 * N is an integer within the range [1..100,000];
 * each element of array A is an integer within the range [−1,000,000..1,000,000].
-***
+
 #### Code
 ```
     public int solution(int[] A) {
@@ -220,10 +223,11 @@ O(N) or O(N * log(N))
 #### Report
 [Candidate Report: training33X6JS-SN7](https://app.codility.com/demo/results/training33X6JS-SN7/)
 ***
+
 > _Painless_  
 > ### [PermCheck](https://app.codility.com/programmers/lessons/4-counting_elements/perm_check/)
 > Check whether array A is a permutation.
-***
+
 A non-empty array A consisting of N integers is given.
 
 A permutation is a sequence containing each element from 1 to N once, and only once.
@@ -272,7 +276,7 @@ Write an efficient algorithm for the following assumptions:
 
 * N is an integer within the range [1..100,000];
 * each element of array A is an integer within the range [1..1,000,000,000].
-***
+
 #### Code
 ```
     public int solution(int[] A) {
@@ -290,5 +294,6 @@ O(N) or O(N * log(N))
 #### Report
 [Candidate Report: trainingVGBR4Z-S47](https://app.codility.com/demo/results/trainingVGBR4Z-S47/)
 ***
+
 _Copyright 2009–2020 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited._
 ***
