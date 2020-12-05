@@ -4,6 +4,7 @@ _Lesson 2_
 [Open reading material (PDF)](https://codility.com/media/train/0-Arrays.pdf)
 ***
 ## Tasks:
+> _Painless_  
 > ### [CyclicRotation](https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/)
 > Rotate an array to the right by a given number of steps.
 ---
@@ -78,7 +79,7 @@ In your solution, focus on correctness. The performance of your solution will no
 
 ***
 ***
-
+> _Painless_
 > ### [OddOccurrencesInArray](https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/)
 > Find value that occurs in odd number of elements.
 ---

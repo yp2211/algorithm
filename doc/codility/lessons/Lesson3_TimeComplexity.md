@@ -4,6 +4,7 @@ _Lesson 3_
 [Open reading material (PDF)](https://codility.com/media/train/1-TimeComplexity.pdf)
 ***
 ## Tasks:
+> _Painless_
 > ### [FrogJmp](https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/)
 > Count minimal number of jumps from position X to Y.
 ***
@@ -46,7 +47,7 @@ O(1)
 [Candidate Report: trainingBFBAZF-EXF](https://app.codility.com/demo/results/trainingBFBAZF-EXF/)
 ***
 ***
-
+> _Painless_
 > ### [PermMissingElem](https://app.codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/)
 > Find the missing element in a given permutation.
 ***
@@ -116,6 +117,7 @@ O(N) or O(N * log(N))
 [Candidate Report: training28V8U4-VDE](https://app.codility.com/c/run/training28V8U4-VDE/)
 ***
 ***
+> _Painless_
 > ### [TapeEquilibrium](https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/)
 > Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.
 ***
