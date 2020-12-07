@@ -1,10 +1,10 @@
-package codility.challenges;
+package codility.challenges.TheOLXGroupchallenge;
 
 /*
 
-    MaximumCanMix.md
+    Multivitamin.md
  */
-public class MaximumCanMix {
+public class Multivitamin {
     // kinds of juice
     // juice.length == N [2..100,000]
 
@@ -47,8 +47,9 @@ public class MaximumCanMix {
 //        System.out.println(java.util.Arrays.toString(juice));
 //        System.out.println(java.util.Arrays.toString(capacity));
 
+
         // 2. mix
-        int tempCount = 1;
+        int tempCount;
         for (int j = 0; j < juice.length; j++) {
             int left = capacity[j] - juice[j];
 

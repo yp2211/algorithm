@@ -17,7 +17,7 @@ that, given three integers A, B and K, returns the number of integers within the
 
 For example, for A = 6, B = 11 and K = 2, your function should return 3, because there are three numbers divisible by 2 within the range [6..11], namely 6, 8 and 10.
 
-Write an efficient algorithm for the following assumptions:
+Write an **efficient** algorithm for the following assumptions:
 
 * A and B are integers within the range [0..2,000,000,000];
 * K is an integer within the range [1..2,000,000,000];
@@ -25,12 +25,14 @@ Write an efficient algorithm for the following assumptions:
 
 #### Code
 ```
-
+    public int solution(int A, int B, int K) {
+        return (int)(Math.floor(B / (double)K)) - (int)(Math.ceil(A / (double)K)) + 1;
+    }
 ```
 Detected time complexity:  
-
+O(1)
 #### Report
-[]()
+[Candidate Report: trainingMUJ282-CCG](https://app.codility.com/demo/results/trainingMUJ282-CCG/)
 ***
 
 > _Respectable_  
