@@ -28,7 +28,7 @@ For example:
 * N is an integer within the range [1..2,147,483,647].
 
 #### Code
-```
+```java:BinaryGap.java
     public int solution(int N) {
         int goal = 0;
 
