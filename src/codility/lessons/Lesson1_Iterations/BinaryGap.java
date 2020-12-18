@@ -1,4 +1,4 @@
-package codility.lessons.Lesson1_Iterrations;
+package codility.lessons.Lesson1_Iterations;
 
 /**
  * Created by peng.yang on ${Date}

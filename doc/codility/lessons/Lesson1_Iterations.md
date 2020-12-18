@@ -27,7 +27,8 @@ For example:
 
 * N is an integer within the range [1..2,147,483,647].
 
-#### Code
+#### Program 1
+Report: [trainingC78Z7J-BPG](https://app.codility.com/demo/results/trainingC78Z7J-BPG/)
 ```java:BinaryGap.java
     public int solution(int N) {
         int goal = 0;
@@ -58,8 +59,32 @@ For example:
     }
 ```
 
-#### Candidate Report
-[trainingC78Z7J-BPG](https://app.codility.com/demo/results/trainingC78Z7J-BPG/)
+#### Program 2
+Report: [trainingPPEWCY-ENN/](https://app.codility.com/demo/results/trainingPPEWCY-ENN/)
+```java:BinaryGapShifter.java
+    public static int solution(int N) {
+        int goal = 0;
+        int counter = 0;
+        boolean counterSwitch = false;
+        while (N > 0) {
+            if ((N & 1) == 1) {
+                if (counterSwitch) {
+                    if (counter > goal) goal = counter;
+
+                    counter = 0;
+                } else {
+                    counterSwitch = true;
+                }
+            } else {
+                if (counterSwitch) counter++;
+            }
+
+            N = N >> 1;
+        }
+
+        return goal;
+    }
+```
 ***
 
 _Copyright 2009–2020 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited._
