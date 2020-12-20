@@ -179,13 +179,42 @@ Write an **efficient** algorithm for the following assumptions:
 * each element of array A is an integer within the range [−10,000..10,000].
 
 #### Code
-```
 
+```java:MinAvgTwoSliceSolution.java
+    public int solution(int[] A) {
+        int goal = 0;
+        int[] P = new int[A.length + 1];
+        P[0] = 0;
+        for (int i = 0; i < A.length; i++) {
+            P[i + 1] = P[i] + A[i];
+        }
+
+        double minAvg = 10000;
+        for(int j = 0; j < A.length - 1; j++) {
+            double currentAvg2 = (double)(P[j + 2] - P[j]) / 2;
+            if (currentAvg2 < minAvg) {
+                minAvg = currentAvg2;
+                goal = j;
+            }
+
+            if (j == A.length - 2) break;;
+
+            double currentAvg3 = (double)(P[j + 3] - P[j]) / 3;
+            if (currentAvg3 < minAvg) {
+                minAvg = currentAvg3;
+                goal = j;
+            }
+        }
+
+        return goal;
+    }
 ```
-Detected time complexity:  
+Detected time complexity:
+
+O(N)
 
 #### Report
-[]()
+[trainingP37RME-WBC](https://app.codility.com/demo/results/trainingP37RME-WBC/)
 ***
 
 > _Painless_  
