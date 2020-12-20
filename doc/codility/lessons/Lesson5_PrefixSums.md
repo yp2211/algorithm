@@ -264,13 +264,34 @@ Write an efficient algorithm for the following assumptions:
 * each element of array A is an integer that can have one of the following values: 0, 1.
 
 #### Code
-```
+[PassingCarsSolution.java]()
 
+```java:PassingCarsSolution.java
+    public int solution(int[] A) {
+        int goal = 0;
+        int[] P = new int[A.length + 1];
+        P[0] = 0;
+        for (int i = 0; i < A.length; i++) {
+            P[i + 1] = P[i] + A[i];
+        }
+
+        for (int j = 0; j < A.length - 1; j++) {
+            if (A[j] == 0) {
+                goal += P[P.length - 1] - P[j + 1];
+                if (goal > 1000000000) {
+                    return -1;
+                }
+            }
+        }
+
+        return goal;
+    }
 ```
 Detected time complexity:  
+O(N)
 
 #### Report
-[]()
+[trainingJC2BAT-X4S](https://app.codility.com/demo/results/trainingJC2BAT-X4S/)
 ***
 _Copyright 2009–2020 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited._
 ***
