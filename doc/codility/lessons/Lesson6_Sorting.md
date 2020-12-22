@@ -98,6 +98,7 @@ contains the following example triplets:
 * (0, 1, 2), product is −3 * 1 * 2 = −6
 * (1, 2, 4), product is 1 * 2 * 5 = 10
 * (2, 4, 5), product is 2 * 5 * 6 = 60
+
 Your goal is to find the maximal product of any triplet.
 
 Write a function:
@@ -125,4 +126,62 @@ Write an efficient algorithm for the following assumptions:
 * each element of array A is an integer within the range [−1,000..1,000].
 
 ---
+#### 解く
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/196344/cd300b3b-0f02-876d-aa09-c3969a9c4bed.png)
 
+#### Program
+
+```java:
+    public int solution(int[] A) {
+        int max1 = -9999;
+        int max2 = -9999;
+        int max3 = -9999;
+        int min2 = 9999;
+        int min1 = 9999;
+
+        for (int a : A) {
+            if (a > max1) {
+                max3 = max2;
+                max2 = max1;
+                max1 = a;
+            } else if (a > max2) {
+                max3 = max2;
+                max2 = a;
+            } else if (a > max3) {
+                max3 = a;
+            }
+
+            if (a < min1) {
+                min2 = min1;
+                min1 = a;
+            } else if (a < min2) {
+                min2 = a;
+            }
+        }
+
+        int maxProduct = max1 * max2 * max3;
+
+        if (max1 <= 0 || min1 >= 0) {
+            // 全て負 || 全て正
+            return maxProduct;
+        } else {
+            if (min2 < 0 ) {
+                // せめて2つ負
+                int temp = max1 * min1 * min2;
+                if (temp > maxProduct) return temp;
+            }
+        }
+
+        return maxProduct;
+    }
+```
+Detected time complexity:
+
+O(N * log(N))
+
+#### jUnit 
+
+#### Report
+[trainingUP9UFH-H2Y](https://app.codility.com/demo/results/trainingUP9UFH-H2Y/)
+
+***
