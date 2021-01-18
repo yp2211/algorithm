@@ -1,5 +1,7 @@
 package codility.lessons.Lesson5_PrefixSums;
 
+import codility.lessons.Lesson5_PrefixSums.Solutions.GenomicRangeQuerySlow62;
+import codility.lessons.Lesson5_PrefixSums.Solutions.GenomicRangeQuerySolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +20,7 @@ class GenomicRangeQuerySolutionTest {
         int[] P = {2, 5, 0};
         int[] Q = {4, 5, 6};
         int[] expected = {2, 4, 1};
-        int[] actual = (new GenomicRangeQuerySlow62()).solution(S, P, Q);
+        int[] actual = (new GenomicRangeQuerySolution()).solution(S, P, Q);
         Assertions.assertArrayEquals(expected, actual);
     }
     @Test

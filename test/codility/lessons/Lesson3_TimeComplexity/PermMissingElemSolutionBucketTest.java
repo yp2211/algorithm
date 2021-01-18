@@ -1,5 +1,6 @@
 package codility.lessons.Lesson3_TimeComplexity;
 
+import codility.lessons.Lesson3_TimeComplexity.Solutions.PermMissingElemSolutionBucket;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

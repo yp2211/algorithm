@@ -1,5 +1,6 @@
 package codility.lessons.Lesson4_CountingElements;
 
+import codility.lessons.Lesson4_CountingElements.Solutions.MaxCountersSlow88;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -17,7 +17,7 @@ class BinaryGapShifterTest {
     void solutionTest1() {
         int N = 1041;
         int expected = 5;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -28,7 +28,7 @@ class BinaryGapShifterTest {
     void solutionTest2() {
         int N = 32;
         int expected = 0;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -38,7 +38,7 @@ class BinaryGapShifterTest {
     void solutionTest3() {
         int N = 9;
         int expected = 2;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -48,7 +48,7 @@ class BinaryGapShifterTest {
     void solutionTest4() {
         int N = 529;
         int expected = 4;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -59,7 +59,7 @@ class BinaryGapShifterTest {
     void solutionTest5() {
         int N = 20;
         int expected = 1;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -69,7 +69,7 @@ class BinaryGapShifterTest {
     void solutionTest6() {
         int N = 15;
         int expected = 0;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -83,7 +83,7 @@ class BinaryGapShifterTest {
         int N = Integer.parseInt("1000100001", 2);
         System.out.println(N);
         int expected = 4;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -94,7 +94,7 @@ class BinaryGapShifterTest {
     void solutionTest8() {
         int N = Integer.parseInt("1000100001001", 2);
         int expected = 4;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -105,7 +105,7 @@ class BinaryGapShifterTest {
     void solutionTest10() {
         int N = 1;
         int expected = 0;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -120,7 +120,7 @@ class BinaryGapShifterTest {
         int N = 2147483647;
         System.out.println(Integer.toBinaryString(N));
         int expected = 0;
-        int actual = codility.lessons.Lesson1_Iterations.BinaryGapShifter.solution(N);
+        int actual = new codility.lessons.Lesson1_Iterations.Solutions.BinaryGapShifterSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 

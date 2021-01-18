@@ -1,9 +1,8 @@
 package codility.lessons.Lesson4_CountingElements;
 
+import codility.lessons.Lesson4_CountingElements.Solutions.FrogRiverOneSolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by peng.yang on ${Date}

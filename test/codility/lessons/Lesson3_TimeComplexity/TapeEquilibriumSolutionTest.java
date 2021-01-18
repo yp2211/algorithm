@@ -1,9 +1,8 @@
 package codility.lessons.Lesson3_TimeComplexity;
 
+import codility.lessons.Lesson3_TimeComplexity.Solutions.TapeEquilibriumSolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by peng.yang on ${Date}

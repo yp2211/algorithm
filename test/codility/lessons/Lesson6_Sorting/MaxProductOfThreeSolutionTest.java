@@ -1,9 +1,8 @@
 package codility.lessons.Lesson6_Sorting;
 
+import codility.lessons.Lesson6_Sorting.Solutions.MaxProductOfThreeSolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by peng.yang on ${Date}

@@ -1,11 +1,8 @@
 package codility.lessons.Lesson6_Sorting;
 
+import codility.lessons.Lesson6_Sorting.Solutions.DistinctSolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.Random;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by peng.yang on ${Date}

@@ -1,9 +1,8 @@
 package codility.lessons.Lesson5_PrefixSums;
 
+import codility.lessons.Lesson5_PrefixSums.Solutions.PassingCarsSolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by peng.yang on ${Date}

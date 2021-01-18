@@ -1,5 +1,6 @@
 package codility.challenges.TheOLXGroupchallenge;
 
+import codility.challenges.TheOLXGroupchallenge.Solutions.MultivitaminSolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

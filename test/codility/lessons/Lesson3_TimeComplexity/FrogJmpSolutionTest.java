@@ -1,5 +1,6 @@
 package codility.lessons.Lesson3_TimeComplexity;
 
+import codility.lessons.Lesson3_TimeComplexity.Solutions.FrogJmpSolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

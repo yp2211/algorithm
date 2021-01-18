@@ -1,5 +1,6 @@
 package codility.lessons.Lesson2_Arrays;
 
+import codility.lessons.Lesson2_Arrays.Solutions.OddOccurrencesInArraySolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +21,7 @@ class OddOccurrencesInArrayTest {
     void solution() {
         int[] A = new int[] { 9, 3, 9, 3, 9, 7, 9};
         int expected = 7;
-        int actual = (new OddOccurrencesInArray()).solution(A);
+        int actual = (new OddOccurrencesInArraySolution()).solution(A);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -42,7 +43,7 @@ class OddOccurrencesInArrayTest {
         }
         long start = System.currentTimeMillis();
 //        System.out.println(start);
-        int actual = (new OddOccurrencesInArray()).solution(A);
+        int actual = (new OddOccurrencesInArraySolution()).solution(A);
         long end = System.currentTimeMillis();
         System.out.println(end - start);
 

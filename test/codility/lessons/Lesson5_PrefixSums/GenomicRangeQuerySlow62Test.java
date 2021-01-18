@@ -1,5 +1,6 @@
 package codility.lessons.Lesson5_PrefixSums;
 
+import codility.lessons.Lesson5_PrefixSums.Solutions.GenomicRangeQuerySlow62;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

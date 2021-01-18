@@ -1,6 +1,6 @@
 package codility.lessons.Lesson1_Iterations;
 
-import codility.lessons.Lesson1_Iterations.BinaryGap;
+import codility.lessons.Lesson1_Iterations.Solutions.BinaryGapSolution;
 import org.junit.jupiter.api.Assertions;
 
 /**
@@ -15,7 +15,7 @@ class BinaryGapTest {
     void solutionTest1() {
         int N = 1041;
         int expected = 5;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -26,7 +26,7 @@ class BinaryGapTest {
     void solutionTest2() {
         int N = 32;
         int expected = 0;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -36,7 +36,7 @@ class BinaryGapTest {
     void solutionTest3() {
         int N = 9;
         int expected = 2;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -46,7 +46,7 @@ class BinaryGapTest {
     void solutionTest4() {
         int N = 529;
         int expected = 4;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -57,7 +57,7 @@ class BinaryGapTest {
     void solutionTest5() {
         int N = 20;
         int expected = 1;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -67,7 +67,7 @@ class BinaryGapTest {
     void solutionTest6() {
         int N = 15;
         int expected = 0;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -81,7 +81,7 @@ class BinaryGapTest {
         int N = Integer.parseInt("1000100001", 2);
         System.out.println(N);
         int expected = 4;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -92,7 +92,7 @@ class BinaryGapTest {
     void solutionTest8() {
         int N = Integer.parseInt("1000100001001", 2);
         int expected = 4;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
     /*
@@ -103,7 +103,7 @@ class BinaryGapTest {
     void solutionTest10() {
         int N = 1;
         int expected = 0;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -118,7 +118,7 @@ class BinaryGapTest {
         int N = 2147483647;
         System.out.println(Integer.toBinaryString(N));
         int expected = 0;
-        int actual = BinaryGap.solution(N);
+        int actual = new BinaryGapSolution().solution(N);
         Assertions.assertEquals(expected, actual);
     }
 
