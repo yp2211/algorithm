@@ -15,7 +15,8 @@
 * 手順2〜5を繰り返します。
 
 ## 3.2 可視化デモ
-![](../../../resources/codility/sort/InsertionSort.gif)
+
+![](../../../resources/sort/InsertionSort.gif)
 
 ## 3.2 実装
 

@@ -12,7 +12,7 @@
 * 重复步骤2~5。
 
 ## 3.2 动图演示
-![](../../resources/codility/sort/InsertionSort.gif)
+![](../../resources/sort/InsertionSort.gif)
 
 ## 3.2 代码实现
 ```$xslt

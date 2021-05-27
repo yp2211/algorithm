@@ -9,7 +9,7 @@
 * 将两个排序好的子序列合并成一个最终的排序序列。
 
 ## 5.2 动图演示
-![](../../resources/codility/sort/MergeSort.gif)
+![](../../resources/sort/MergeSort.gif)
 
 ## 5.3 代码实现
 ```$xslt

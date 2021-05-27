@@ -9,7 +9,7 @@
 * 对radix进行计数排序（利用计数排序适用于小范围数的特点）；
 
 ## 10.2 动图演示
-![](../../resources/codility/sort/RadixSort.gif)
+![](../../resources/sort/RadixSort.gif)
 
 ## 10.3 代码实现
 ```$xslt

@@ -10,7 +10,7 @@
 * 反向填充目标数组：将每个元素i放在新数组的第C(i)项，每放一个元素就将C(i)减去1。
 
 ## 8.2 动图演示
-![](../../resources/codility/sort/CountingSort.gif)
+![](../../resources/sort/CountingSort.gif)
 
 ## 8.3 代码实现
 ```$xslt

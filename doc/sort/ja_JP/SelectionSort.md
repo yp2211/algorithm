@@ -14,7 +14,7 @@ Selection-sortは、シンプルで直感的なソートアルゴリズムです
 * n-1パスが終了し、配列が順序付けられます。
 
 ## 2.2 可視化デモ
-![](../../../resources/codility/sort/SelectionSort.gif)
+![](../../../resources/sort/SelectionSort.gif)
 
 ## 2.3 実装
 

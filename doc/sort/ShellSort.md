@@ -13,7 +13,7 @@
 * 每趟排序，根据对应的增量ti，将待排序列分割成若干长度为m 的子序列，分别对各子表进行直接插入排序。仅增量因子为1 时，整个序列作为一个表来处理，表长度即为整个序列的长度。
 
 ## 4.2 过程演示
-![](../../resources/codility/sort/ShellSort.png)
+![](../../resources/sort/ShellSort.png)
 
 ## 4.3 代码实现
 ```$xslt

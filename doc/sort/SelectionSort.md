@@ -11,7 +11,7 @@ n个记录的直接选择排序可经过n-1趟直接选择排序得到有序结�
 * n-1趟结束，数组有序化了。
 
 ## 2.2 动图演示
-![](../../resources/codility/sort/SelectionSort.gif)
+![](../../resources/sort/SelectionSort.gif)
 
 ## 2.3 代码实现
 ```

@@ -10,7 +10,7 @@
 **注意，如果递归使用桶排序为各个桶排序，则当桶数量为1时要手动减小BucketSize增加下一循环桶的数量，否则会陷入死循环，导致内存溢出。**
 
 ## 9.2 图片演示
-![](../../resources/codility/sort/bucketSort.png)
+![](../../resources/sort/bucketSort.png)
 
 ## 9.3 代码实现
 ```

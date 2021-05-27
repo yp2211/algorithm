@@ -3,10 +3,10 @@
 十种常见排序算法可以分为两大类：
 * 比较类排序：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。
 * 非比较类排序：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。 
-![](../../resources/codility/sort/classification1.png)
+![](../../resources/sort/classification1.png)
 
 ## 0.2 算法复杂度
-![](../../resources/codility/sort/complexity.png)
+![](../../resources/sort/complexity.png)
 
 ## 0.3 相关概念
 
@@ -16,7 +16,7 @@
 * 空间复杂度：是指算法在计算机内执行时所需存储空间的度量，它也是数据规模n的函数。
 
 ## 0.4 算法分类
-![](../../resources/codility/sort/classification2.png)
+![](../../resources/sort/classification2.png)
 
 ## 0.5 比较和非比较的区别
 常见的快速排序、归并排序、堆排序、冒泡排序等属于比较排序。在排序的最终结果里，元素之间的次序依赖于它们之间的比较。每个数都必须和其他数进行比较，才能确定自己的位置。

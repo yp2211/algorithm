@@ -9,7 +9,7 @@
 * 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序。
 
 ## 6.2 动图演示
-![](../../resources/codility/sort/QuickSort.gif)
+![](../../resources/sort/QuickSort.gif)
 
 ## 6.3 代码实现
 ```$xslt

@@ -8,7 +8,7 @@
 * 重复步骤1~3，直到排序完成。
 
 ## 1.2 动图演示
-![](../../resources/codility/sort/bubbleSort.gif)
+![](../../resources/sort/bubbleSort.gif)
 
 ## 1.3 代码实现
 
