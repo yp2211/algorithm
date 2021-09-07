@@ -6,7 +6,7 @@ import codility.exams.rakuten.IBiratian;
 /**
  * Created by peng.yang on ${Date}
  */
-public class Biratian implements IBiratian {
+public class Biratian implements codility.exams.rakuten.IBiratian {
 
     public int solution(int[] A) {
         int goal = 0;
