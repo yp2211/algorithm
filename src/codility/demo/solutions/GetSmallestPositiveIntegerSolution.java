@@ -27,6 +27,8 @@ public class GetSmallestPositiveIntegerSolution implements IGetSmallestPositiveI
 
         int target = MAX;
 
+        // Time: O(N)
+        // Space: O(N)   1000000
         byte[] B = new byte[MAX + 1];
         for (int aA : A) {
             if (aA >= 0) {

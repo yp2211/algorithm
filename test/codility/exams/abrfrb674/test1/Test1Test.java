@@ -12,17 +12,25 @@ public class Test1Test {
 
     @Test
     void test1() {
-        int expected = 0;
-        int actual = s.solution(null);
+        int expected = 103;
+        int actual = s.solution(130);
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void test2() {
+        int A = 123456;
+        int expected = 162534;
+        int actual = s.solution(A);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void solutionTestDuration() {
-        int[] A = new int[N_MAX];
-        for (int a = 0; a < A.length; a++) {
-            A[a] = ThreadLocalRandom.current().nextInt(0, N_MAX + 1);
-        }
+        int A = 100000000;
+//        for (int a = 0; a < A.length; a++) {
+//            A[a] = ThreadLocalRandom.current().nextInt(0, N_MAX + 1);
+//        }
 
         Assertions.assertTimeout(Duration.ofMillis(7000), ()-> {
             int actual =(s.solution(A));

@@ -43,5 +43,20 @@ class MaxProductOfThreeSolutionTest {
         int actrual = (new MaxProductOfThreeSolution()).solution(A);
         Assertions.assertEquals(expected, actrual);
     }
+    @Test
+    void solutionSimple5() {
+        int[] A = new int[] {1, 2, 3};
+        int expected = 6;
+        int actrual = (new MaxProductOfThreeSolution()).solution(A);
+        Assertions.assertEquals(expected, actrual);
+    }
 
+
+    @Test
+    void solutionSimple6() {
+        int[] A = new int[] {-1, -3, 3, 1};
+        int expected = 9;
+        int actrual = (new MaxProductOfThreeSolution()).solution(A);
+        Assertions.assertEquals(expected, actrual);
+    }
 }

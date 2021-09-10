@@ -4,11 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
-import java.util.concurrent.ThreadLocalRandom;
 
-public class Test3Test {
+public class Test3Test2 {
     private final int N_MAX = 50;
-    private Test3Impl s = new Test3Impl();
+    private Test3Impl2 s = new Test3Impl2();
 
     @Test
     void test1() {
@@ -27,6 +26,7 @@ public class Test3Test {
         int actual = s.solution(N, S);
         Assertions.assertEquals(expected, actual);
     }
+
 
     @Test
     void test3() {

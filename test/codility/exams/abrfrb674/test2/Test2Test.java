@@ -12,20 +12,36 @@ public class Test2Test {
 
     @Test
     void test1() {
-        int expected = 0;
-        int actual = s.solution(null);
+        String expected = "a";
+        String actual = s.solution("aba");
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
+    void test2() {
+        String expected = "z";
+        String actual = s.solution("zz");
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    void test3() {
+        String expected = "i";
+        String actual = s.solution("codility");
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void test4() {
+        String expected = "z";
+        String actual = s.solution("abcdefghijklmnopqrstuvwxyzz");
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
     void solutionTestDuration() {
-        int[] A = new int[N_MAX];
-        for (int a = 0; a < A.length; a++) {
-            A[a] = ThreadLocalRandom.current().nextInt(0, N_MAX + 1);
-        }
+        String A = "abcdefghijklmnopqrstuvwxyzz";
 
         Assertions.assertTimeout(Duration.ofMillis(7000), ()-> {
-            int actual =(s.solution(A));
+            String actual = (s.solution(A));
         });
     }
 }

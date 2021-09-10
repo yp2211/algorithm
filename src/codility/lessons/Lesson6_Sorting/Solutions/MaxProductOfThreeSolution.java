@@ -9,12 +9,14 @@ public class MaxProductOfThreeSolution implements IMaxProductOfThree {
 
     @Override
     public int solution(int[] A) {
-        int max1 = -9999;
-        int max2 = -9999;
-        int max3 = -9999;
-        int min2 = 9999;
-        int min1 = 9999;
+        int max1 = Integer.MIN_VALUE;
+        int max2 = Integer.MIN_VALUE;
+        int max3 = Integer.MIN_VALUE;
+        int min2 = Integer.MAX_VALUE;
+        int min1 = Integer.MAX_VALUE;
 
+        // Time complexity: O(N)
+        // Space complexity: O(1)
         for (int a : A) {
             if (a > max1) {
                 max3 = max2;
@@ -40,12 +42,10 @@ public class MaxProductOfThreeSolution implements IMaxProductOfThree {
         if (max1 <= 0 || min1 >= 0) {
             // 全て負 || 全て正
             return maxProduct;
-        } else {
-            if (min2 < 0 ) {
-                // せめて2つ負
-                int temp = max1 * min1 * min2;
-                if (temp > maxProduct) return temp;
-            }
+        } else if (min2 < 0 ) {
+            // せめて2つ負
+            int temp = max1 * min1 * min2;
+            if (temp > maxProduct) return temp;
         }
 
         return maxProduct;
