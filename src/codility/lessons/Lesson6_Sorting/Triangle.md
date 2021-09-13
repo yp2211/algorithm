@@ -1,3 +1,9 @@
+_Lesson6_
+## [Sorting](https://app.codility.com/programmers/lessons/6-sorting/)
+
+***
+[Open reading material (PDF)](https://codility.com/media/train/4-Sorting.pdf)
+
 > _Easy_
 > ### [Triangle](https://app.codility.com/programmers/lessons/6-sorting/triangle/)
 > Determine whether a triangle can be built from a given set of edges.
