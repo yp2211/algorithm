@@ -41,14 +41,81 @@ Write an **efficient** algorithm for the following assumptions:
 * each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
 ***
 
-#### Source code
+#### Source code 1
 ```java
+class Solution {
+    public int solution(int[] A) {
+        java.util.HashMap<Integer, Integer> counter = new java.util.HashMap<>();
 
+        int dominatorCount = A.length / 2;
+        for (int i = 0; i < A.length; i++) {
+            int aCount = 0;
+            if (counter.containsKey(A[i])) {
+                aCount = counter.get(A[i]) + 1;
+            } else {
+                aCount = 1;
+            }
+
+            if (aCount > dominatorCount) {
+                return i;
+            } else {
+                counter.put(A[i], aCount);
+            }
+        }
+        return -1;
+    }
+}
 ```
 
 #### Detected time complexity:
+O(N)
 
+#### Detected space complexity:
+O(N)
 
 #### Report
+[trainingDYEBM7-G8B](https://app.codility.com/demo/results/trainingDYEBM7-G8B/)
+
+
+#### Source code 2
+```java
+class Solution {
+    public int solution(int[] A) {
+        if (A == null || A.length == 0) return -1;
+        if (A.length == 1) return 0;
+
+        int[] B = A.clone();
+        java.util.Arrays.sort(B);
+        int mode = A.length % 2;
+        int index = A.length / 2;
+        int leader;
+        if (mode == 1 || (mode == 0 && B[index] == B[index - 1] && (index + 1 < B.length && B[index] == B[index + 1]))) {
+            leader = B[index];
+        } else {
+            return -1;
+        }
+
+        int resultIndex = -1;
+        int counter = 0;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] == leader) {
+                counter++;
+                if (resultIndex < 0 ) resultIndex = i;
+            }
+        }
+
+        return counter > index ? resultIndex : -1;
+    }
+}
+```
+
+#### Detected time complexity:
+O(N*log(N)) or O(N)
+
+#### Detected space complexity:
+O(1)
+
+#### Report
+[trainingH2QNRG-EWM](https://app.codility.com/demo/results/trainingH2QNRG-EWM/)
 
 ***
