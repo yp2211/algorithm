@@ -61,14 +61,32 @@ Write an **efficient** algorithm for the following assumptions:
 * each element of array A is an integer within the range [−10,000..10,000].
 ***
 
-#### Source code
+#### Code Walkthrough
 ```java
+class Solution {
+    public int solution(int[] A) {
+        int[] prevSubSum = new int[A.length];
+        int[] postSubSum = new int[A.length];
 
+        for (int i = 1; i < A.length - 1; i++) {
+            prevSubSum[i] = Math.max(0, prevSubSum[i - 1] + A[i]);
+        }
+        for (int i = A.length - 2; i > 0; i--) {
+            postSubSum[i] = Math.max(0, postSubSum[i + 1] + A[i]);
+        }
+        int globalMaxSum = 0;
+        for (int i = 1; i < A.length - 1; i++) {
+            globalMaxSum = Math.max(prevSubSum[i - 1] + postSubSum[i + 1], globalMaxSum);
+        }
+        return globalMaxSum;
+    }
+}
 ```
 
-#### Detected time complexity:
+#### Conclusion
+* Detected time complexity: O(N)
+* Detected space complexity: O(N)
 
-
-#### Report
+[Codility Report](https://app.codility.com/demo/results/training6A8EBU-KK6/)
 
 ***

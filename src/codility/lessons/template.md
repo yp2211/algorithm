@@ -13,14 +13,15 @@ _Lesson8_
 
 ***
 
-#### Source code
+#### Code Walkthrough
 ```java
 
 ```
 
-#### Detected time complexity:
+#### Conclusion
+* Detected time complexity: O(n<sup>2</sup>)
+* Detected space complexity: O(log N)
 
-
-#### Report
+[Codility Report]()
 
 ***
