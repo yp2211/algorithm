@@ -8,7 +8,7 @@ _Lesson10_
 > ### [Peaks](https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/peaks/)
 > Divide an array into the maximum number of same-sized blocks, each of which should contain an index P such that A[P - 1] < A[P] > A[P + 1].
 
-#### Task description
+### Task description
 ***
 A non-empty array A consisting of N integers is given.
 
@@ -83,15 +83,123 @@ Write an efficient algorithm for the following assumptions:
 * each element of array A is an integer within the range [0..1,000,000,000].
 ***
 
-#### Code Walkthrough
+### Code Walkthrough 1 (100%)
 ```java
+class Solution {
+    public int solution(int[] A) {
+        int N = A.length;
 
+        java.util.ArrayList<Integer> peaks = new java.util.ArrayList<>();
+        for (int i = 1; i < N - 1; i++)
+            if (A[i] > A[i - 1] && A[i] > A[i + 1]) peaks.add(i);
+
+        if (peaks.size() <= 1) return peaks.size();
+
+        // E.G. N = 12, K=[1,2,3,4,6,12]
+        for (int K = 1; K <= N; K++) {                  // K: block size
+            if (N % K == 0) {
+                int blocks = N / K;
+                int currentBucket = 0;
+                for (Integer peak : peaks) {
+                    int peakBucket = peak / K;
+                    if (peakBucket == currentBucket) {
+                        // current bucket has been filled, then go to next bucket
+                        currentBucket += 1;
+                        // until last bucket is filled
+                        if (currentBucket == blocks) break;
+                    } else if (peakBucket > currentBucket) {
+                        currentBucket = -1;
+                        break;
+                    }
+                }
+
+                if (currentBucket == blocks) return blocks;
+            }
+        }
+        return 0;
+    }
+}
 ```
 
 #### Conclusion
-* Detected time complexity: O(n<sup>2</sup>)
-* Detected space complexity: O(log N)
+* Detected time complexity: O(N * log(log(N)))
+* Detected space complexity: O(N)
 
-[Codility Report]()
+[Codility Report](https://app.codility.com/demo/results/trainingK4SNQD-59Z/)
+
+### Code Walkthrough 2 (100%)
+Remember divisors by stack: 
+```java
+class Solution {
+    public int solution(int[] A) {
+        int result = 0;
+        int N = A.length;
+
+        java.util.ArrayList<Integer> peaks = new java.util.ArrayList<>();
+        for (int i = 1; i < N - 1; i++)
+            if (A[i] > A[i - 1] && A[i] > A[i + 1]) peaks.add(i);
+
+        if (peaks.size() <= 1) return peaks.size();
+
+        int K = 1;      // elements number of one block
+        int blocks;
+        java.util.Stack<Integer> divisors = new java.util.Stack<>();
+        // E.G. N = 12, K=[1,2,3]
+        while (K * K <= N) {
+            if (N % K == 0) {
+                if (K * K == N) {
+                    blocks = K;
+                } else {
+                    divisors.push(K);
+                    blocks = N / K;
+                }
+                if (isOK(peaks, blocks, K)) return blocks;
+            }
+            K += 1;
+        }
+
+        while (!divisors.isEmpty()) {
+            // E.G. N = 12, K=[1,2,3]
+            //      blocks=[3,2,1] -> K=[4,6,12]
+            blocks = divisors.pop();
+            if (isOK(peaks, blocks, N / blocks)) return blocks;
+        }
+
+        return result;
+    }
+
+    private boolean isOK(java.util.ArrayList<Integer> peaks, int blocks, int k) {
+        int currentBucket = 0;
+        for (Integer peak : peaks) {
+            int peakBucket = peak / k;
+            if (peakBucket == currentBucket) {
+                // current bucket is filled, then go to next bucket
+                currentBucket += 1;
+                // until last bucket is filled
+                if (currentBucket == blocks) break;
+            } else if (peakBucket > currentBucket) {
+                currentBucket = -1;
+                break;
+            }
+        }
+        return currentBucket == blocks;
+    }
+}
+```
+#### Conclusion
+* Detected time complexity: O(N * log(log(N)))
+* Detected space complexity: O(N)
+
+[Codility Report](https://app.codility.com/demo/results/trainingUS72XB-WNH/)
+
+### Performance comparison
+
+|TEST|DESCRIPTION|[Code 1](https://app.codility.com/demo/results/trainingK4SNQD-59Z/) | [Code 2(divisors)](https://app.codility.com/demo/results/trainingUS72XB-WNH/)|
+|----|----|----|----|
+|medium_random|chaotic medium sequences, length = ~5,000|1. 0.024 sOK<br>2. 0.016 sOK|1. 0.024 sOK<br>2. 0.016 sOK|
+|medium_anti_slow|medium test anti slow solutions|1. 0.068 sOK|1. 0.068 sOK|
+|large_random|chaotic large sequences, length = ~50,000|1. 0.192 sOK<br>2. 0.092 sOK|1. 0.192 sOK<br>2. **0.088** sOK|
+|large_anti_slow|large test anti slow solutions|1. 0.136 sOK<br>2. 0.200 sOK|1. **0.140** sOK<br>2. **0.196** sOK|
+|extreme_max|extreme max test|1. 0.224 sOK<br>2. 0.364 sOK|1. **0.220** sOK<br>2. 0.364 sOK|
 
 ***
