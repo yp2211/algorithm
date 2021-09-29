@@ -50,19 +50,17 @@ Write an efficient algorithm for the following assumptions:
 ```java
 class Solution {
     public int solution(int N, int M) {
-        int maxChocolates = 0;
-
-        for (int i = 0; i < N; i++) {
-            java.util.Set<Integer> wrappers = new java.util.HashSet<>();
-            int j = 0;
-            int wrapper = i;
-            while (wrappers.add(wrapper)) {
-                j += 1;
-                wrapper = (i + j*M) % N;
-            }
-            maxChocolates = Math.max(maxChocolates, wrappers.size());
+        java.util.Set<java.math.BigInteger> wrappers = new java.util.HashSet<>();
+        java.math.BigInteger i = java.math.BigInteger.valueOf(0);
+        java.math.BigInteger wrapper = java.math.BigInteger.valueOf(0);
+        java.math.BigInteger bigM = java.math.BigInteger.valueOf(M);
+        java.math.BigInteger bigN = java.math.BigInteger.valueOf(N);
+        while (wrappers.add(wrapper)) {
+            i = i.add(java.math.BigInteger.valueOf(1));
+            wrapper = (i.multiply(bigM)).mod(bigN);
         }
-        return maxChocolates;
+
+        return wrappers.size();
     }
 }
 ```
@@ -70,20 +68,23 @@ class Solution {
 Conclusion
 
 * Detected time complexity: O(N + M)
-* Detected space complexity: O(log N)
+* Detected space complexity: O(N)
 
 |Task Score|Correctness|Performance|
 |---|---|---|
 |50%|100%|0%|
 
-[Codility Report](https://app.codility.com/demo/results/trainingK37QGH-8BJ/)
+[Codility Report](https://app.codility.com/demo/results/trainingJN3GDF-7NW/)
 
 ***
 
 ##### Optimized
-This problem wants us to calculate gcd. because M*gcd will be the least common multiple(LCM) of M and N. For beginning to eat, when we meet the LCM, we got wrapper.
+We will solve this problem by using gcd (greatest common divisor). Because, N*M/gcd will be the least common multiple(LCM) of M and N. For beginning to eat, when we meet the LCM, we got wrapper. 
 
-For examples: 
+* LCM = N\*M\/gcd
+* answer*M = LCM -> answer = LCM/M = (N\*M\/gcd)/M = N/gcd
+
+So we got N/gcd, we got the answer. For examples: 
 
 * N = 10, M = 4, gcd is 2, then the result will be N/gcd = 10/2 = 5, answer is 5.  
 * N = 7, M = 4, gcd is 1, then N/gcd = 7/1 = 7, answer is 7.

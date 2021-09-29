@@ -12,4 +12,11 @@ public class ChocolatesByNumbersIntuitiveTest {
         int actual = s.solution(N, M);
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void testLarge2() {
+        int N = (int)(Math.pow(3,9)*Math.pow(2,14)), M=(int)(Math.pow(2,14)*Math.pow(2,14));
+        int expected = 19683;
+        int actual = s.solution(N, M);
+        Assertions.assertEquals(expected, actual);
+    }
 }
