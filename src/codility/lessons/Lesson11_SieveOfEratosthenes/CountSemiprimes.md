@@ -4,7 +4,7 @@ _Lesson11_
 ***
 [Open reading material (PDF)](https://codility.com/media/train/9-Sieve.pdf)
 
-> _Easy_
+> _Medium_
 > ### [CountSemiprimes](https://app.codility.com/programmers/lessons/11-sieve_of_eratosthenes/count_semiprimes/)
 > Count the semiprime numbers in the given range [a..b]
 

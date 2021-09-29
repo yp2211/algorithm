@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ExercisesTest {
-    Exercises s = new Exercises();
+    Lesson10Exercises s = new Lesson10Exercises();
     @Test
     public void CountingDivisorsTest1() {
         int N = 36;

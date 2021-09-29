@@ -25,3 +25,4 @@ _Lesson8_
 [Codility Report]()
 
 ***
+### See also: [CodilityのLessonsをすべて解く（更新中）](https://qiita.com/yp2211/items/537f733060bb0f2aba8f)

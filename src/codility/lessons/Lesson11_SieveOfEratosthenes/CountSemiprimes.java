@@ -1,7 +1,5 @@
 package codility.lessons.Lesson11_SieveOfEratosthenes;
 
-import java.util.Arrays;
-
 public class CountSemiprimes {
     public int[] solution(int N, int[] P, int[] Q) {
         int M = Q.length;

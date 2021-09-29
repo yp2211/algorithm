@@ -4,7 +4,7 @@ package codility.lessons.Lesson11_SieveOfEratosthenes;
 import org.junit.jupiter.api.Test;
 
 public class ExercisesTest {
-    Exercises s = new Exercises();
+    Lesson11Exercises s = new Lesson11Exercises();
     @Test
     public void sieveTest() {
         int N = 17;

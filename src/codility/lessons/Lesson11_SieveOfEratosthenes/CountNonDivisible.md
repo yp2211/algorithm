@@ -4,7 +4,7 @@ _Lesson11_
 ***
 [Open reading material (PDF)](https://codility.com/media/train/9-Sieve.pdf)
 
-> _Easy_
+> _Medium_
 > ### [CountNonDivisible](https://app.codility.com/programmers/lessons/11-sieve_of_eratosthenes/count_non_divisible/)
 > Calculate the number of elements of an array that are not divisors of each element.
 

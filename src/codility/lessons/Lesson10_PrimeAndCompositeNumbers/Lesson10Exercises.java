@@ -1,6 +1,6 @@
 package codility.lessons.Lesson10_PrimeAndCompositeNumbers;
 
-public class Exercises {
+public class Lesson10Exercises {
     public int CountingDivisors(int N) {
         int i = 1;
         int result = 0;

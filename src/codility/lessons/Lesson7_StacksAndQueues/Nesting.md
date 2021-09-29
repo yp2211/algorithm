@@ -1,6 +1,6 @@
 _Lesson7_
 ## [Stacks and Queues](https://app.codility.com/programmers/lessons/7-stacks_and_queues/)
-***
+
 [Open reading material (PDF)](https://codility.com/media/train/5-Stacks.pdf)
 
 > _Easy_
@@ -20,6 +20,7 @@ A string S consisting of N characters is called properly nested if:
 For example, string "(()(())())" is properly nested but string "())" isn't.
 
 Write a function:
+
 ```java
 class Solution { public int solution(String S); }
 ```
@@ -39,7 +40,7 @@ Write an efficient algorithm for the following assumptions:
 ```java
 class Solution {
     public int solution(String S) {
-        java.util.Stack<String> stack = new java.util.Stack();
+        java.util.Stack<String> stack = new java.util.Stack<>();
         for (char c : S.toCharArray()) {
             String currentFlag = String.valueOf(c);
             if ("(".equals(currentFlag)) {

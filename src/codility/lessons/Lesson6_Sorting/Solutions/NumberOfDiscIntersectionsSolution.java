@@ -1,5 +1,6 @@
 package codility.lessons.Lesson6_Sorting.Solutions;
 
+
 import codility.lessons.Lesson6_Sorting.INumberOfDiscIntersections;
 
 /**

@@ -2,7 +2,7 @@ package codility.lessons.Lesson11_SieveOfEratosthenes;
 
 import java.util.ArrayList;
 
-public class Exercises {
+public class Lesson11Exercises {
     /*
     O(n log log n)
      */
