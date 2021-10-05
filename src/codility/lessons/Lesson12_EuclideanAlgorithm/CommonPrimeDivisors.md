@@ -47,7 +47,7 @@ Write an efficient algorithm for the following assumptions:
 ***
 
 #### Code Walkthrough
-If integer A[i] and B[i] has the same set of prime divisors, A[i] repeatedly divided by the prime divisors of B[i], we can get 1 at last. And also B[i] repeatedly divided by the prime divisors of A[i], we can get 1 at last too.
+If integer A[i] and B[i] has the same set of prime divisors, A[i] repeatedly divided by the prime divisors of B[i], we can get 1 at last (the remainder is 0). And also B[i] repeatedly divided by the prime divisors of A[i], we can get 1 (the remainder is 0) at last too.
 
 GCD (greatest common divisor) of A[i] and B[i] is a multiple of prime divisors, so we can use gcd to simplify calculations .
 
