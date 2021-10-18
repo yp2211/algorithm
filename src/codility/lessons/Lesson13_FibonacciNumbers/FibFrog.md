@@ -75,6 +75,7 @@ Write an efficient algorithm for the following assumptions:
 #### Code Walkthrough
 
 ##### Intuitive
+Greedy algorithm
 
 ```java
 import java.util.ArrayList;
@@ -156,22 +157,60 @@ Conclusion
 
 ***
 
-##### Optimized
+##### Optimized greedy algorithm
 
 ```java
+class Solution {
+    public int solution(int[] A) {
+        final int N = A.length;
+        final int GOAL = N + 1;
+        final int START = -1;
 
+        // fibonacci numbers array
+        int[] fibs = new int[N+2];
+        fibs[0] = 1; // 0 1 1
+        fibs[1] = 2;
+        for (int i = 2; i < fibs.length; i++) {
+            fibs[i] = fibs[i-2] + fibs[i-1];
+            if (fibs[i] == GOAL) return 1;
+        }
+
+        // greedy array
+        int[] greedy = new int[GOAL];
+        for (int i = START; i < GOAL; i++) {
+            // if current position is the Start position or a leaf
+            if (i == START || greedy[i] > 0) {
+                // mark all reachable leaves
+                for (int j = 0; (i + fibs[j]) < GOAL; j++) {
+                    // frog jumps "i+fibs[j]"
+                    int jumpToIndex = i + fibs[j];
+
+                    // reached goal (index of GOAL is GOAL-1)
+                    // or reached a leaf
+                    if (jumpToIndex == GOAL - 1 || A[jumpToIndex] == 1) {
+                        if (i == START) greedy[jumpToIndex] = 1;
+                        else if (greedy[jumpToIndex] <= 0) greedy[jumpToIndex] = greedy[i] + 1;
+                        else greedy[jumpToIndex] = Math.min(greedy[jumpToIndex], greedy[i] + 1);
+                    }
+                }
+            }
+        }
+
+        return greedy[GOAL - 1] <= 0 ? -1 : greedy[GOAL - 1];
+    }
+}
 ```
 
 Conclusion
 
-* Detected time complexity: O(log(N + M))
-* Detected space complexity: O(1)
+* Detected time complexity: O(N * log(N))
+* Detected space complexity: O(N)
 
 |Task Score|Correctness|Performance|
 |---|---|---|
 |100%|100%|100%|
 
-[Codility Report]()
+[Codility Report](https://app.codility.com/demo/results/training3TQRPH-V38/)
 
 
 ### More: [CodilityのLessonsをすべて解く（更新中）](https://qiita.com/yp2211/items/537f733060bb0f2aba8f)
