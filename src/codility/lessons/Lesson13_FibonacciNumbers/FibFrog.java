@@ -1,66 +1,43 @@
 package codility.lessons.Lesson13_FibonacciNumbers;
 
-import java.util.ArrayList;
-
 public class FibFrog {
     public int solution(int[] A) {
-        final int MAX_X = 100000;
-        ArrayList<Integer> fibs = getFibs(MAX_X);
+        final int N = A.length;
+        final int GOAL = N + 1;
+        final int START = -1;
 
-        if (contains(fibs, A.length + 1)) return 1;
+        // fibonacci numbers array
+        int[] fibs = new int[N+2];
+        fibs[0] = 1; // 0 1 1
+        fibs[1] = 2;
+        for (int i = 2; i < fibs.length; i++) {
+            fibs[i] = fibs[i-2] + fibs[i-1];
+            if (fibs[i] == GOAL) return 1;
+        }
 
-        for (int i = 0; i < A.length; i++) {
-            if(A[i] == 0) continue;
-            int distance = i + 1;
-            if (contains(fibs, distance)) {
-                A[i] = 1;
-                continue;
-            }
+        // greedy array
+        int[] greedy = new int[GOAL];
+        for (int i = START; i < GOAL; i++) {
+            // if current position is the Start position or a leaf
+            if (i == START || greedy[i] > 0) {
+                // mark all reachable leaves
+                for (int j = 0; (i + fibs[j]) < GOAL; j++) {
+                    // frog jumps "i+fibs[j]"
+                    int jumpToIndex = i + fibs[j];
 
-            A[i] = 0;
-            for (int j = 0; j < i; j++) {
-                if(A[j] == 0) continue;
-                distance = i - j;
-                if (contains(fibs, distance)) {
-                    if (A[i] == 0) A[i] = A[j] + 1;
-                    else A[i] = Math.min(A[i], A[j] + 1);  // Local optimal solution
+                    // reached goal (index of GOAL is GOAL-1)
+                    // or reached a leaf
+                    if (jumpToIndex == GOAL - 1 || A[jumpToIndex] == 1) {
+                        // if current position is start, then the frog can reach the jumpToIndex leaf by 1 time jump
+                        if (i == START) greedy[jumpToIndex] = 1;
+                        // compute "Local optimal solution" of the leaf "A[jumpToIndex]"
+                        else if (greedy[jumpToIndex] <= 0) greedy[jumpToIndex] = greedy[i] + 1;
+                        else greedy[jumpToIndex] = Math.min(greedy[jumpToIndex], greedy[i] + 1);
+                    }
                 }
             }
         }
 
-        int step = Integer.MAX_VALUE;
-        for (int i = 0; i < A.length; i++) {
-            if(A[i] == 0) continue;
-            int distance = A.length - i;
-            if (contains(fibs, distance)) {
-                step = Math.min(step, A[i] + 1);  // Global optimal solution
-            }
-        }
-
-        return step == Integer.MAX_VALUE ? -1 : step;
-    }
-
-    private boolean contains(ArrayList<Integer> fibs, int x) {
-        for (Integer fib : fibs) {
-            if (fib > x) return false;
-            if (fib == x) return true;
-        }
-        return false;
-    }
-
-    private ArrayList<Integer> getFibs(int MAX_X) {
-        ArrayList<Integer> fibs = new ArrayList<>();
-        int fib_1 = 1;
-        int fib_2 = 1;
-        fibs.add(1);
-        int fib;
-        do {
-            fib = fib_1 + fib_2;
-            fibs.add(fib);
-            fib_2 = fib_1;
-            fib_1 = fib;
-        } while (fib < MAX_X);
-
-        return fibs;
+        return greedy[GOAL - 1] <= 0 ? -1 : greedy[GOAL - 1];
     }
 }
